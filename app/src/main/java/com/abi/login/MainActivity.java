@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 //Titulo.setText(Nombre.getText());
                 //Nombre.setText("");
                 String var = etUser.getText().toString();
-                Intent intent = new Intent(MainActivity.this, Perfil.class);
+                Intent intent = new Intent(MainActivity.this, Home.class);
                 intent.putExtra("email", var);
                 startActivity(intent);
             }
