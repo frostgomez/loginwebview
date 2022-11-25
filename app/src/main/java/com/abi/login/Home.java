@@ -3,6 +3,7 @@ package com.abi.login;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +18,23 @@ public class Home extends AppCompatActivity {
     TextView tvNombre,tvProfesion,tvHome,tvSoporte,tvCerrar;
     Boolean menuact = false;
     @SuppressLint("MissingInflatedId")
+=======
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class Home extends AppCompatActivity {
+    ConstraintLayout cMenu;
+    ImageView imMenu;
+    Boolean menuact = false;
+>>>>>>> origin/main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         cMenu = findViewById(R.id.cMenu);
+<<<<<<< HEAD
         cPerfil = findViewById(R.id.cPerfil);
         cHome = findViewById(R.id.cHome);
         cSoporte = findViewById(R.id.cSoporte);
@@ -40,6 +52,9 @@ public class Home extends AppCompatActivity {
 
         Bundle varextra = getIntent().getExtras();
         tvNombre.setText(varextra.getString("email"));
+=======
+        imMenu = findViewById(R.id.imMenu);
+>>>>>>> origin/main
 
         imMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +69,7 @@ public class Home extends AppCompatActivity {
                 }
             }
         });
+<<<<<<< HEAD
         cPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,6 +102,8 @@ public class Home extends AppCompatActivity {
                 Toast.makeText(Home.this,"Menú Soporte",Toast.LENGTH_LONG).show();
             }
         });
+=======
+>>>>>>> origin/main
 
     }
 }
