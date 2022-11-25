@@ -34,8 +34,6 @@ public class Perfil extends AppCompatActivity {
         btnvolver = findViewById(R.id.btnvolver);
         btnvolver.setText("Regresar");
 
-
-
         Bundle varextra = getIntent().getExtras();
         Log.d("Depuración", varextra.getString("email", "Valor por default").toString());
         tvPersona.setText(varextra.getString("email"));
@@ -43,7 +41,9 @@ public class Perfil extends AppCompatActivity {
         btnvolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, MainActivity.class);
+                Intent intent = new Intent(Perfil.this, Home.class);
+                String var = tvPersona.getText().toString();
+                intent.putExtra("email", var);
                 startActivity(intent);
             }
         });
